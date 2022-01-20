@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LoggerService } from './services/logger.service';
+import { GamesService } from "./services/games.service";
 
 @Component({
   selector: 'app-root',
@@ -14,12 +15,29 @@ export class AppComponent {
 
   username:string = 'Valor inicial';
 
+  /* Primera Forma importar un servicio
   constructor(private logger:LoggerService){
 
+  }*/
+
+  /* Segunda Forma importar un servicio */
+  private logger: LoggerService;
+  private games: GamesService;
+  constructor(){
+      this.logger = new LoggerService();
+      this.games = new GamesService();
   }
 
+
   verData(msg:string){
-    console.log(msg);
+    console.log(msg);    
+    this.logger.methodExample();
+    try{
+        this.logger.log("Iniciando método verData()");
+        console.log(this.games.getGames());
+    } catch (error) {
+      this.logger.error(error);
+    }
   }
 
   clickme(username:string) {
