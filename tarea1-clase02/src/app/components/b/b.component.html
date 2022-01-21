@@ -1,0 +1,26 @@
+<h2>{{ componenteB }}</h2>
+<button type="button" (click)="listarPersonas()" #data>Lista Personas</button>
+<table *ngIf="esVisible;" class="table-primary my-5">
+	<thead>
+		<tr>
+			<th>Nombre</th>
+			<th>Paterno</th>
+			<th>Materno</th>
+			<th>Edad</th>
+			<th>Estudia</th>
+			<th>Plataforma</th>
+			<th>Pais</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let persona of personas">
+			<td>{{ persona.nombre }}</td>
+			<td>{{ persona.paterno }}</td>
+			<td>{{ persona.materno }}</td>
+			<td>{{ persona.edad }}</td>
+			<td>{{ persona.estudia }}</td>
+			<td>{{ persona.plataforma }}</td>
+			<td>{{ persona.pais }}</td>
+		</tr>
+	</tbody>
+</table>
