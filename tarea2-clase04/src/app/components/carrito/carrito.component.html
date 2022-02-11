@@ -1,0 +1,38 @@
+<h3 class="display-5 fw-bold">Carrito de compras</h3>
+<table class="table" *ngIf="dataCarrito.length > 0">
+  <thead>
+  	<tr>
+		<th colspan="4"></th>
+	</tr>
+	<tr>
+		<th>Producto</th>
+		<th>Cantidad</th>
+		<th>Remover</th>
+		<th>Precio</th>
+	</tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor = "let data of dataCarrito">
+    <tr>
+       <td>
+	       	<div class="card">
+			    <div style="display: flex; flex: 1 1 auto;">
+			        <div class="img-square-wrapper">
+			        	<img class="" [src]="data.card.img" width="300" height="180">
+			        </div>
+			        <div class="card-body">
+			            <h5 class="card-title"> {{ data.card.name }} </h5>
+			            <p class="card-text">Descripción: {{ data.card.description }}</p>
+				    	<p class="card-text">Plataforma: {{ data.card.platform }}</p>
+			        </div>
+			    </div>
+			</div>
+       </td>
+       <td></td>
+       <td></td>
+       <td></td>
+    </tr>
+    </ng-container>
+  </tbody>
+</table>
+

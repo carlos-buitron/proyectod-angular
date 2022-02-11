@@ -1,0 +1,13 @@
+<div class="card-group">
+	<app-card (selectCard)="addCarrito($event)" [dataCard] = "item" [indexCard] = i *ngFor = "let item of items; let i = index;"></app-card>
+</div>
+<hr>
+<div class="p-5 mb-4 bg-light rounded-3">
+  <div class="container-fluid py-5">    
+    <div>    
+    		<app-carrito [dataCarrito] = "itemsCarrito"></app-carrito>
+				<!-- <app-carrito [dataCarrito] = "itemCarrito" *ngFor = "let itemCarrito of itemsCarrito"></app-carrito> -->
+    		<p *ngIf="itemsCarrito.length == 0" class="col-md-8 fs-4">Tu carrito de compras esta vacio.</p>
+    </div>
+  </div>
+</div>

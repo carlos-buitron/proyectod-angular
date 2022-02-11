@@ -1,0 +1,108 @@
+<!--<ul class="list-group">
+	<li class="list-group-item">
+		<p> Nombre: {{ dataCarrito.card.name }} </p>
+		<p> Descripcion: {{ dataCarrito.card.description }} </p>
+		<p> Plataforma: {{ dataCarrito.card.platform }} </p>
+	</li>
+</ul>-->
+
+<!-- <td> Nombre: {{ dataCarrito.card.name }} </td>
+<td> Descripcion: {{ dataCarrito.card.description }} </td>
+<td> Plataforma: {{ dataCarrito.card.platform }} </td>
+<td> <img [src]="dataCarrito.card.img" width="25%"></td> -->
+
+
+<!-- <td>
+	<div class="card" style="width: 18rem;">
+	    <img [src]="dataCarrito.card.img" class="card-img-left" width="25%">
+		<div class="card-body">
+		    <h5 class="card-title">Nombre: {{ dataCarrito.card.name }}</h5>
+		    <p class="card-text">Descripción: {{ dataCarrito.card.description }}</p>
+	    	<p class="card-text">Plataforma: {{ dataCarrito.card.platform }}</p>
+	    </div>
+	</div>
+</td> -->
+
+<!-- Modelo de Card ejemplo -->
+<!-- <td>
+	<div class="card flex-row flex-wrap">
+        <div class="card-header border-0">
+            <img src="//placehold.it/200" alt="">
+        </div>
+        <div class="card-block px-2">
+            <h4 class="card-title">Title</h4>
+            <p class="card-text">Description</p>
+            <a href="#" class="btn btn-primary">BUTTON</a>
+        </div>
+        <div class="w-100"></div>
+        <div class="card-footer w-100 text-muted">
+            FOOTER
+        </div>
+    </div>
+</td> 
+
+
+
+<div class="card">
+    <div class="card-horizontal">
+        <div class="img-square-wrapper">
+            <img class="" src="http://via.placeholder.com/300x180" alt="Card image cap">
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+    </div>
+    <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+</div>
+
+
+<td>
+	<div class="card flex-row flex-wrap">
+        <div class="card-header border-0">
+        	<img [src]="dataCarrito.card.img" width="200px">
+        </div>
+        <div class="card-block px-2">
+            <p class="card-text">Nombre: {{ dataCarrito.card.name }}</p>
+            <p class="card-text">Descripción: {{ dataCarrito.card.description }}</p>
+	    	<p class="card-text">Plataforma: {{ dataCarrito.card.platform }}</p>
+        </div>
+        <div class="w-100"></div>
+    </div>
+</td> 
+
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+style="display: flex; flex: 1 1 auto;"
+
+-->
+
+
+<td>
+	<div class="card">
+	    <div style="display: flex; flex: 1 1 auto;">
+	        <div class="img-square-wrapper">
+	        	<img class="" [src]="dataCarrito.img" width="300" height="180">
+	        </div>
+	        <div class="card-body">
+	            <h5 class="card-title"> {{ dataCarrito.name }} </h5>
+	            <p class="card-text">Descripción: {{ dataCarrito.description }}</p>
+		    	<p class="card-text">Plataforma: {{ dataCarrito.platform }}</p>
+	        </div>
+	    </div>
+	</div>
+</td>
+<td>{{cantidad}}</td>
+<td></td>
+<td></td>
+
+
+
+
+
+

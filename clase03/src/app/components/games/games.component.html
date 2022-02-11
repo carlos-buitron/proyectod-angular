@@ -1,0 +1,37 @@
+<!-- 
+	A esta etiqueta del componente hijo vamos a pasarle el nombre de la variable que tiene la informacion provista del servicio, ese nombre de la variable que esta definida dentro del componente Hijo (Card) y tiene que estar dentro de corchetes [].
+
+	Entre parentesis va el nombre de la variable Output, y le vamos a decir que cuando haya un cambio en esta variable que realice una funcion addCarrito($event). Tener en cuenta que el @Output trabaja sobre su selector
+-->
+<div class="card-group">
+	<app-card (selectCard)="addCarrito($event)" [dataCard] = "item" [indexCard] = i *ngFor = "let item of items; let i = index;"></app-card>
+</div>
+<hr>
+<div class="p-5 mb-4 bg-light rounded-3">
+  <div class="container-fluid py-5">
+    <h1 class="display-5 fw-bold">Carrito de compras</h1>
+    <div>
+    	<table class="table" *ngIf="itemsCarrito.length > 0">
+			<thead>
+				<tr>
+					<th colspan="4"></th>
+				</tr>
+				<tr>
+					<th>Elementos</th>
+					<th>Cantidad</th>
+					<th>Remover</th>
+					<th>Precio</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<app-carrito [dataCarrito] = "itemCarrito" [cantidad] = "countCard" *ngFor = "let itemCarrito of itemsCarrito"></app-carrito>
+				</tr>				
+			</tbody>
+			<!-- <app-carrito [dataCarrito] = "itemCarrito" *ngFor = "let itemCarrito of itemsCarrito"></app-carrito> -->
+		</table>    	
+    </div>
+    <p *ngIf="itemsCarrito.length == 0" class="col-md-8 fs-4">Tu carrito de compras esta vacio.</p>
+    <!--<button class="btn btn-primary btn-lg" type="button">Pagar</button>-->
+  </div>
+</div>
