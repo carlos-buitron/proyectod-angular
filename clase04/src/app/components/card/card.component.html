@@ -1,9 +1,12 @@
-<div class="card" style="width: 18rem;">
-  <img [src]="dataCard.img" class="card-img-top" alt="...">
+<div class="card text-center" style="width: 18rem;"> <!-- Se agrega text-center -->
+  <img class="card-img-top img-fluid" [src]="dataCard.img">
   <div class="card-body">
     <h5 class="card-title">{{ dataCard.name }}</h5>
     <p class="card-text">{{ dataCard.description }}</p>
     <p class="card-text">{{ dataCard.platform }}</p>
-    <a href="#" class="btn btn-primary" (click)="buyGame()">Comprar</a>
+    <button class="btn btn-primary" (click)="detailGame(indexCard)"> Ver detalle </button>
+    <hr>
+    <!-- <a href="#" class="btn btn-primary" (click)="buyGame()"> Comprar </a> -->
+    <a class="btn btn-primary" (click)="buyGame()"> Comprar </a>
   </div>
 </div>

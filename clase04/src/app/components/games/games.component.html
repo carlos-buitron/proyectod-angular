@@ -11,7 +11,7 @@
   <div class="container-fluid py-5">
     <h5 class="display-5 fw-bold">Carrito de compras</h5>
     <div>    	
-			<app-carrito [dataCarrito] = "itemCarrito" *ngFor = "let itemCarrito of itemsCarrito"></app-carrito>
+			<app-carrito (gameDelete)="deleteElement($event)" [indexElement] = i [dataCarrito] = "itemCarrito" *ngFor = "let itemCarrito of itemsCarrito; let i = index;"></app-carrito>
     </div>
     <p *ngIf="itemsCarrito.length == 0" class="col-md-8 fs-4">Tu carrito de compras esta vacio.</p>
   </div>

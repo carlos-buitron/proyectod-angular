@@ -8,6 +8,7 @@ import { GamesComponent } from './components/games/games.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CardComponent } from './components/card/card.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
+import { DetailgameComponent } from './components/detailgame/detailgame.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CarritoComponent } from './components/carrito/carrito.component';
     GamesComponent,
     HeaderComponent,
     CardComponent,
-    CarritoComponent
+    CarritoComponent,
+    DetailgameComponent
   ],
   imports: [
     BrowserModule,
