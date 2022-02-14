@@ -1,0 +1,5 @@
+<p> Nombre Completo - Personaje - Género </p>
+
+<ul *ngFor="let item of harryPotter">
+	<li> {{ item.actor? item.actor: "Sin nombre completo" }} - {{ item.name }} - {{ item.gender }}</li>
+</ul>
