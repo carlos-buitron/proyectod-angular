@@ -13,6 +13,7 @@ export class PaisesService {
 
   }
 
+  // httpClient es para mantener observado el estado de la variable
   getPaises(): Observable<any>{
     return this.httpClient.get(this.urlPaises);
   }
